@@ -1,15 +1,15 @@
-//Random Function Math.floor(Math.random() * 10); to get Single Digit. :
-let number=Math.floor(Math.random()*10);
-console.log(number);
+//Random Function Math.floor(Math.random() * 10); to get Single Digit. (USE REPL) :
+num = Math.floor(Math.random()*10)
 
-//Use Random to get Dice Number between 1 to 6 : 
- let dicenumber = Math.floor(Math.random()*6)+1;
- console.log("Random dice number:",`${dicenumber}`);
+//Use Random to get Dice Number between 1 to 6 : use REPL 
+ dice = Math.floor(Math.random()*6)+1;
 
-//Add two Random Dice Number and Print the Result :
-let dice1= Math.floor(Math.random()*6)+1;
-let dice2= Math.floor(Math.random()*6)+1;
-console.log(`Dice1:${dice1}, Dice2:${dice2}, Sum:${dice1+dice2}`);
+
+//Add two Random Dice Number and Print the Result :(USE REPL)
+ dice1= Math.floor(Math.random()*6)+1
+ dice2 = Math.floor(Math.random()*6)+1
+dice+dice2
+
 
 //Write a program that reads 5 Random 2 Digit values , then find their sum and the average :
 let sum=0;
