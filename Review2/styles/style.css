@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  overflow-x: hidden;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 94%;
+    height: 80px;
+    background:transparent;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.nav-right-container{
+    display: flex;
+    align-items: center;
+}
+.nav-center{
+    display: flex;
+    gap:30px;
+    list-style: none;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 450;
+  word-spacing: 1.5px;
+  letter-spacing: 1px;
+}
+
+.img-logo img {
+  height: 40px;
+  width: auto;
+}
+.map {
+    position: relative;
+    margin-top: 0px;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    background-color: black;
+}
+.map video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 0.5;     
+}
+.map-text h1 {
+    font-size: 55px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+}
+.map-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 40%); 
+    text-shadow: white;
+    text-align: center;
+    color: #fff;
+    z-index: 10; 
+    width: 90%;
+}
+.heading {
+  text-align: center;
+  padding: 60px 0 20px 0;
+  background-color: #f8f8f8;
+}
+.heading h3 {
+  font-size: 80px;
+  width: 100%;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.heading p {
+  font-size: 48px;
+  color: #666;
+  margin-bottom: 30px;
+}
+.places-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px 0;
+    background:rgb(224, 222, 222);
+}
+
+
+.tourist-card {
+    background: white;
+    width: 280px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tourist-card:hover {
+    transform: scale(1.05);
+}
+
+.tourist-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tourist-card h3 {
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.tourist-card p {
+    color: #666;
+    font-size: 14px;
+}
+.places-section2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    background:rgb(224, 222, 222);
+}
+.footer {
+    width: 100%;
+    min-height: 400px; 
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(123, 123, 123, 0.6), rgba(95, 93, 93, 0.6)), 
+                      url('./assests/footer.jpeg');
+    background-size: cover;      
+    background-position: center;  
+   
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.copyright {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+   opacity: 1;
+}
+
+
+/* RESPONSIVE FIXES */
+/* Desktop */
+.tourist-card, .img {
+    width: 300px; 
+    margin: 20px auto; 
+}
+
+/* Tablet and below */
+@media (max-width:1024px){
+  .map-text h1{font-size:40px}
+  .heading h3{font-size:60px}
+  .heading p{font-size:32px}
+  .tourist-card{width:80%; margin:20px auto;}
+}
+
+/* Mobile (768px) */
+@media (max-width:768px){
+  .nav{
+    padding:10px 15px;
+  }
+  .nav-center{
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+  }
+
+  #gallery-grid, .row {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .img, .tourist-card {
+    width: 90%;
+    max-width: 400px;
+    margin: 0mauto;
+  }
+
+  .map{height:70vh}
+  .map-text h1{font-size:28px}
+  .heading h3{font-size:36px}
+  .heading p{font-size:18px}
+  .places-section,
+  .places-section2{padding:40px 10px}
+  .tourist-card{width:90%; margin:20px auto;}
+  #searchInput{width:100%}
+  .footer-links{flex-direction:column;gap:15px;align-items:center}
+}
+
+/* Mobile Small (480px) */
+@media (max-width:480px){
+  #gallery-grid, .row {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 25px;
+  }
+
+  .img, .tourist-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto; 
+  }
+
+  .map-text h1{font-size:22px}
+  .heading h3{font-size:28px}
+  .heading p{font-size:16px}
+}
